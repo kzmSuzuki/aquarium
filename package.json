@@ -2,6 +2,9 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "canvas": "npm:@napi-rs/canvas@^0.1.53"
+  },
   "engines": {
     "node": "20.x"
   },
