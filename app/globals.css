@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-mplus), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-mplus), 'Hiragino Rounded W8 Pro', 'Hiragino Maru Gothic ProN', sans-serif;
+  background: linear-gradient(180deg, #87CEEB 0%, #006994 100%);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 水中の泡アニメーション */
+.bubble {
+  position: absolute;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+  border-radius: 50%;
+  animation: floatUp linear infinite;
+  pointer-events: none;
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.4);
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(110vh) scale(0.8); opacity: 0; }
+  10% { opacity: 1; }
+  80% { opacity: 0.8; }
+  100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+}
+
+/* ガラス風のカードデザイン */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* テキストの光るエフェクト */
+.title-glow {
+  text-shadow: 0 0 15px rgba(255,255,255,0.8), 0 0 30px rgba(0,191,255,0.8);
+}
